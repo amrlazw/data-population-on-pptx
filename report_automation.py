@@ -1,6 +1,7 @@
 import psycopg2
 from pptx import Presentation
 from pptx.util import Inches
+from datetime import datetime
 
 try:
     # Connect to the database
@@ -48,8 +49,11 @@ try:
         i += 1
 
     # Save the PowerPoint presentation
-    prs.save('Laporan_Bulanan_Generated.pptx')
-    print("-Successfully created the pptx file!")
+    now = datetime.now()
+    timestamp = now.strftime("%Y-%m-%d %H-%M-%S")
+    filename = "Laporan_Bulanan_Generated " + timestamp + ".pptx"
+    prs.save(filename)
+    print("-Successfully created the presentation file")
 
 except psycopg2.Error as e:
     print(f'Error: {e}')
