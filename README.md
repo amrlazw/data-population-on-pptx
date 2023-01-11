@@ -14,27 +14,30 @@ This project is a python script that fetches data from a PostgreSQL database and
 - PostgresSQL 15
 
 ## DB Create
- CREATE DATABASE mofdb
-    WITH
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    LC_COLLATE = 'Malay_Malaysia.1252'
-    LC_CTYPE = 'Malay_Malaysia.1252'
-    TABLESPACE = pg_default
-    CONNECTION LIMIT = -1
-    IS_TEMPLATE = False; 
-    
-     INSERT INTO inisiatif_perbelanjaan (inisiatif, agensi, perbelanjaan)
+```sh
+CREATE DATABASE mofdb
+WITH
+OWNER = postgres
+ENCODING = 'UTF8'
+LC_COLLATE = 'Malay_Malaysia.1252'
+LC_CTYPE = 'Malay_Malaysia.1252'
+TABLESPACE = pg_default
+CONNECTION LIMIT = -1
+IS_TEMPLATE = False; 
+```
+```sh
+INSERT INTO inisiatif_perbelanjaan (inisiatif, agensi, perbelanjaan)
 VALUES ('Inisiatif A', 'Agensi A', 123.21), 
-       ('Inisiatif B', 'Agensi B', 21.31),
-       ('Inisiatif C', 'Agensi C', 33.00),
-       ('Inisiatif D', 'Agensi D', 12.33),
-       ('Inisiatif E', 'Agensi E', 0.23),
-       ('Inisiatif F', 'Agensi F', 32.12),
-       ('Inisiatif G', 'Agensi G', 4.21),
-       ('Inisiatif H', 'Agensi H', 9.32),
-       ('Inisiatif I', 'Agensi I', 123.42),
-       ('Inisiatif J', 'Agensi J', 0.11); 
+('Inisiatif B', 'Agensi B', 21.31),
+('Inisiatif C', 'Agensi C', 33.00),
+('Inisiatif D', 'Agensi D', 12.33),
+('Inisiatif E', 'Agensi E', 0.23),
+('Inisiatif F', 'Agensi F', 32.12),
+('Inisiatif G', 'Agensi G', 4.21),
+('Inisiatif H', 'Agensi H', 9.32),
+('Inisiatif I', 'Agensi I', 123.42),
+('Inisiatif J', 'Agensi J', 0.11); 
+```
 
 ## Usage
 1. Make sure that you have a PostgreSQL database set up and running on your localhost.
